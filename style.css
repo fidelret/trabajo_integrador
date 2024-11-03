@@ -1,0 +1,459 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto", Arial, Tahoma, sans-serif;
+}
+/* Header and Nav */
+header {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    width: 100%;
+    height: 8em;
+    background: rgb(0,128,0);
+    background: linear-gradient(40deg, rgba(0,128,0,0.56) 0%, rgba(51,51,51,0.99) 3%, rgba(51,51,51,0.99) 95%, rgba(0,128,0,0.57) 100%);
+    padding: 1em 0 1em 0;
+    border-bottom: 0.5em solid green;
+}
+
+header img{
+    width: 15em;
+    border: 0.3em solid green;
+    border-radius: 0.5em;
+}
+
+nav{
+    margin: 0.4em 2em 0 0;
+    align-items: center;
+}    
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+}
+
+nav li {
+    list-style-type: none;
+    margin: 0 0.1em; 
+}
+
+nav li a{
+    font-size: 1.3em;
+    text-decoration: none;
+    line-height: 1.5em; 
+    padding: 0.5em;
+    color: #FFF;
+    background-color: #333;
+    border: 0.14em solid green;
+    border-radius: 0.4em;
+}
+
+nav li a:hover{
+    color: #333;
+    background-color: #FFF;
+}
+
+#icon_cart{
+    margin-top: 0.5em;
+    color: #ffffff;
+    background-color: green;
+    padding: 1em;
+    border: 0.2em solid green;
+    border-radius: 0.3em;
+}
+
+#icon_cart:hover{
+    color: #fff;
+    
+    border: 0.2em solid #fff;
+}
+
+.inicio{
+    background-color: rgb(51, 51, 51);
+    border-bottom: 0.5em solid green;
+}
+
+.titulo-inicio{
+    display: flex;
+    justify-content: center; 
+    padding: 3em 9em;
+
+} 
+
+.titulo-inicio p{
+    color: #FFF;
+    background-color: 333;
+    font-size: 1.5em;
+}
+
+
+.imagen-inicio{
+    width: 100%;
+    border-bottom: 0.5em solid green;
+}
+
+/*reseñas-clientes*/
+.grid-container-resenas{
+    height: 100%;
+    background-image: linear-gradient(rgba(253, 249, 249, 0.5), rgba(51, 51, 51, 0.9)),
+                  url("./img/tractor-6704118_1280.jpg");
+    background-size: cover;
+    border-bottom: 0.5em solid green;
+}
+
+.titulo-seccion{
+    display: flex;
+    justify-content: center; 
+    padding: 2em;
+    border-bottom: 0.1em solid green;
+}
+
+.titulo-seccion p{
+    font-size: 2.5em;
+    color: #fff;
+    background-color: #333;
+    border: 0.05em solid green;
+    border-radius: 0.3em;
+    padding: 0.5em;
+}
+
+/*reseñas*/
+.grid-container-resenas{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly; 
+      
+}
+
+.resena{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    background: rgb(0,128,0);
+    background: linear-gradient(40deg, rgba(51,51,51,0.56) 0%, rgba(255,255,255,0.75) 6%, rgba(255,255,255,0.75) 95%, rgba(0,128,0,0.57) 100%);
+    margin: 2em;
+    padding: 2em;
+    border: 0.1em solid #333;;
+    border-radius: 0.5em;
+}
+
+.resena:hover{
+    background: rgb(0,128,0);
+    background: linear-gradient(40deg, rgba(51,51,51,0.56) 0%, rgba(255,255,255,0.75) 30%, rgba(255,255,255,0.75) 70%, rgba(0,128,0,0.57) 100%);
+
+}
+
+.imagen-resena{
+    width: 10em;
+    border-radius: 50% 50%;
+    border: 0.2em solid green;
+}
+
+.resena p{
+    padding: 1em;
+}
+
+.nombre-usuario{
+    font-size: 1.2em;
+}
+
+.texto-valoracion{
+    text-align: justify;
+}
+
+/*links a páginas*/
+.links-section-inicio{
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(rgba(51, 51, 51, 0.95), rgba(0, 128, 0, 0.95)),
+                  url("./img/tractor-5753374_1280.jpg");
+    background-size: cover;
+
+}
+
+.links-section-inicio a{
+    font-size: 2em;
+    color: #FFF;
+    margin: 0.5em;
+    padding: 2em;
+    border: 0.01em solid #fff;
+    border-radius: 0.2em;
+    text-decoration: none;
+}
+
+.links-section-inicio a:hover{
+    color: #FFF;
+    background: rgb(0,128,0);
+    background: linear-gradient(40deg, rgba(0,128,0,0.56) 0%, rgba(51,51,51,0.50) 6%, rgba(51,51,51,0.50) 95%, rgba(0,128,0,0.57) 100%);
+    border: 0.01em solid #333;
+}
+
+
+/*footer*/
+.container-footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+    background: rgb(0,128,0);
+    background: linear-gradient(40deg, rgba(0,128,0,0.56) 0%, rgba(51,51,51,0.99) 3%, rgba(51,51,51,0.99) 95%, rgba(0,128,0,0.57) 100%);
+    color: #fff;
+    border-top: 0.5em solid #FFF;
+}
+
+.img-footer{
+    width: 9em;
+    border: 0.2em solid green;
+    border-radius: 0.5em;
+    margin-bottom: 0.9em;
+}
+
+.copyright{
+    font-size: 0.6em;
+    text-align: center;
+}
+
+.logo-copyright-footer{
+    display: flex;
+    flex-direction: column;     
+    justify-content: center;    
+    align-items: center;   
+    
+}
+
+.menu-footer, .redes{
+    margin-top: 1.5em;
+}
+
+.menu-footer li{
+    list-style-type: none;
+}
+
+.menu-footer a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-footer a:hover{
+    color: green;
+}
+
+.redes i{
+    color: #fff;
+    padding: 1em 1em 0 0;
+    font-size: 1.1em;
+}
+
+.redes i:hover{
+    color: green;
+}
+
+
+/*formulario-mapa*/
+.formulario-mapa{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between; 
+    align-items: center;   
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(51, 51, 51, 0.9)),
+                  url("./img/tractor-6704118_1280.jpg");
+    background-size: cover;
+
+}
+
+/*formulario*/
+form{
+    padding: 2em;
+}
+
+form > div{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    padding: 0.8em;
+}
+
+
+form label{
+    font-size: 1.1em;
+    padding: 0.1em;
+    color: #fff;
+    background-color: #333;
+    border: 0.1em solid rgb(51, 51, 51);
+    border-radius: 0.2em;
+}
+
+
+#nombre, #apellido, #email, #mensaje, .botones > input{
+    font-size: 1em;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    width: 20em;
+    height: 1em;
+    border: 0.1em solid rgb(51, 51, 51);
+    border-radius: 0.5em;
+}
+
+#mensaje{
+    height: 10em;
+}
+
+.botones > input{
+    font-size: 1.1em;
+    height: 2.5em;
+    color:#fff;
+    background-color: #333;
+    border: 0.14em solid rgb(0, 128, 0);
+    border-radius: 0.5em;
+}
+
+.botones > input:hover{
+    color: #333;
+    background-color:#fff;
+
+}
+
+/*mapa*/
+.mapa{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+}
+
+
+iframe{
+    width: 500px;
+    height: 500px;
+    border: 0.1em solid rgb(51, 51, 51);
+    border-radius: 0.5em;
+}
+
+
+
+/*producto*/
+.grid-container-producto{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    justify-content: space-between; 
+    align-items: center;
+    background-image: linear-gradient(rgba(253, 249, 249, 0.5), rgba(51, 51, 51, 0.9)),
+                  url("./img/tractor-6704118_1280.jpg");
+}
+
+.producto{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    margin: 2% 0 2% 0;
+    padding: 1%;
+    background: rgb(0,128,0);
+    background: linear-gradient(40deg, rgba(51,51,51,0.56) 0%, rgba(255,255,255,0.75) 6%, rgba(255,255,255,0.75) 95%, rgba(0,128,0,0.57) 100%);
+    border: 0.1em solid rgb(0, 128, 0);
+    border-radius: 0.5em;
+}
+
+.producto:hover{
+    background: rgb(0,128,0);
+    background: linear-gradient(40deg, rgba(51,51,51,0.56) 0%, rgba(255,255,255,0.75) 30%, rgba(255,255,255,0.75) 70%, rgba(0,128,0,0.57) 100%);
+}
+
+.imagen-producto{  
+    width: 18em;
+    height: 7em;
+    object-fit: cover;
+    border-radius: 0.5em;   
+}
+
+.nombre-producto, .precio-producto{
+    padding: 1em 0;
+}
+
+.valoracion{
+        color: rgb(0, 128, 0);  
+}
+
+.precio-producto{
+    font-size: 1.5em;
+}
+
+.boton-agregar{
+    padding: 0.5em;
+    font-size: 1em;
+    height: 2.5em;
+    color:#fff;
+    background-color: rgb(0, 128, 0);
+    border: 0.1em solid #333;
+    border-radius: 0.5em;
+}
+
+.boton-agregar:hover{
+    background-color: rgb(51, 51, 51);
+}
+
+
+
+@media (max-width:1500px)  {
+    .grid-container-producto{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media (max-width:900px)  {
+    .grid-container-resenas{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-container-producto{
+        grid-template-columns: repeat(1, 1fr);
+}
+
+    .formulario-mapa{
+       
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+}
+
+}
+
+
+@media (max-width:680px)  {
+    .grid-container-resenas{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    header {
+        flex-direction: column; 
+        height: auto;
+    }
+
+    .links-section-inicio, .container-footer{
+        flex-direction: column; 
+        text-align: center;
+    }
+
+
+    nav{
+        margin: 2em 0 1em 0;
+    }
+
+    #icon_cart{
+        position: fixed;
+        right: 2em;
+        box-shadow: 0.3em 0.3em 0.3em 0.3em rgba(0, 0, 0, 0.3);;
+    }
+
+    
+}
+
+
+
