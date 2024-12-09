@@ -1,8 +1,9 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family: "Roboto", Arial, Tahoma, sans-serif;
+    font-family: "Poppins", Arial, Tahoma, sans-serif;
 }
+
 /* Header and Nav */
 header {
     display: flex;
