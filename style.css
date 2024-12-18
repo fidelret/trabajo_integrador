@@ -10,24 +10,28 @@ header {
     justify-content: space-around; 
     align-items: center;
     width: 100%;
-    height: 8em;
+    height: 8rem;
     background: rgb(0,128,0);
     background: linear-gradient(40deg, rgba(51,51,51,0.99) 0%, rgba(51,51,51,0.99) 95%, rgba(0,128,0,0.57) 100%);
-    padding: 1em 0 1em 0;
-    border-bottom: 0.5em solid green;
+    padding: 1rem 0 1em 0;
+    border-bottom: 0.5rem solid green;
 }
 
 header img{
-    width: 25em;
+    width: 25rem;
+}
+
+container-fluid{
+    background-color: #333;
 }
 
 nav{
-    margin: 0.4em 2em 0 0;
+    margin: 0.4rem 2em 0 0;
     align-items: center;
 }    
 
 nav ul{
-    margin: 0;
+    margin: 0.6rem 0;
     padding: 0;
     display: flex;
     justify-content: right;
@@ -35,18 +39,18 @@ nav ul{
 
 nav li {
     list-style-type: none;
-    margin: 0 0.1em; 
+    margin: 0 0.1rem; 
 }
 
 nav li a{
-    font-size: 1.2em;
+    /*font-size: 1.2rem;*/
     text-decoration: none;
-    line-height: 1.5em; 
-    padding: 0.5em;
+    line-height: 1.5rem; 
+    padding: 0.4rem;
     color: #FFF;
     background-color: #333;
-    border: 0.1em solid green;
-    border-radius: 0.4em;
+    border: 0.1rem solid green;
+    border-radius: 0.4rem;
 }
 
 nav li a:hover{
@@ -54,42 +58,59 @@ nav li a:hover{
     background-color: #FFF;
 }
 
-#icon_cart{
-    margin-top: 0.5em;
-    color: #ffffff;
-    background-color: green;
-    padding: 1em;
-    border: 0.2em solid green;
-    border-radius: 0.3em;
+.navbar-toggler {
+    border: 0.1rem solid green;
+    border-radius: 0.3rem;
 }
 
-#icon_cart:hover{
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* Cambia el color de los trazos a blanco */
+} 
+
+.navbar-toggler:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.icon_cart{
+    width: 5rem;
+    height: 3rem;
+    margin-top: 0.6rem;
+    position: fixed;
+    right: 15rem;
+    z-index: 1;
+}
+
+.icon_cart:hover{
     color: #fff;
-    
-    border: 0.2em solid #fff;
+    border: 0.2rem solid #fff;
+}
+
+#contadorCarrito {
+    margin-left: 0.5rem; 
 }
 
 .inicio{
     background-color: rgb(51, 51, 51);
-    border-bottom: 0.5em solid green;
+    border-bottom: 0.5rem solid green;
 }
 
 .titulo-inicio{
     display: flex;
     justify-content: center; 
-    padding: 2em 9em;
+    padding-top: 1rem;
 
 } 
 
 .titulo-inicio p{
     color: #FFF;
     background-color: 333;
-    font-size: 1.5em;
+    font-size: 1.2rem;
 }
 
 .imagen-inicio{
     width: 100%;
-    border-bottom: 0.5em solid green;
+    border-bottom: 0.5rem solid green;
 }
 
 /*reseñas-clientes*/
@@ -98,23 +119,23 @@ nav li a:hover{
     background-image: linear-gradient(rgba(253, 249, 249, 0.5), rgba(51, 51, 51, 0.9)),
                   url("./img/tractor-6704118_1280.jpg");
     background-size: cover;
-    border-bottom: 0.5em solid green;
+    border-bottom: 0.5rem solid green;
 }
 
 .titulo-seccion{
     display: flex;
     justify-content: center; 
-    padding: 2em;
-    border-bottom: 0.1em solid green;
+    padding: 2rem;
+    border-bottom: 0.1rem solid green;
 }
 
 .titulo-seccion p{
-    font-size: 2em;
+    font-size: 2rem;
     color: #fff;
     background-color: green ;
-    border: 0.05em solid #333;
-    border-radius: 0.3em;
-    padding: 0.5em;
+    border: 0.05rem solid #333;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
 }
 
 /*reseñas*/
@@ -132,10 +153,10 @@ nav li a:hover{
     justify-content: center;
     background: rgb(0,128,0);
     background: linear-gradient(40deg, rgba(51,51,51,0.56) 0%, rgba(255,255,255,0.75) 6%, rgba(255,255,255,0.75) 95%, rgba(0,128,0,0.57) 100%);
-    margin: 2em;
-    padding: 2em;
-    border: 0.1em solid #333;;
-    border-radius: 0.5em;
+    margin: 2rem;
+    padding: 2rem;
+    border: 0.1rem solid #333;;
+    border-radius: 0.5rem;
 }
 
 .resena:hover{
@@ -147,7 +168,7 @@ nav li a:hover{
 .imagen-resena{
     width: 10em;
     border-radius: 50% 50%;
-    border: 0.2em solid green;
+    border: 0.2rem solid green;
 }
 
 .resena p{
@@ -155,7 +176,7 @@ nav li a:hover{
 }
 
 .nombre-usuario{
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 .texto-valoracion{
@@ -173,12 +194,12 @@ nav li a:hover{
 }
 
 .links-section-inicio a{
-    font-size: 2em;
+    font-size: 2rem;
     color: #FFF;
-    margin: 0.5em;
-    padding: 2em;
-    border: 0.01em solid #fff;
-    border-radius: 0.2em;
+    margin: 0.5rem;
+    padding: 2rem;
+    border: 0.01rem solid #fff;
+    border-radius: 0.2rem;
     text-decoration: none;
 }
 
@@ -186,28 +207,27 @@ nav li a:hover{
     color: #FFF;
     background: rgb(0,128,0);
     background: linear-gradient(40deg, rgba(0,128,0,0.56) 0%, rgba(51,51,51,0.50) 6%, rgba(51,51,51,0.50) 95%, rgba(0,128,0,0.57) 100%);
-    border: 0.01em solid #333;
+    border: 0.01rem solid #333;
 }
-
 
 /*footer*/
 .container-footer{
     display: flex;
     justify-content: space-around;
-    padding: 1em;
+    padding: 1rem;
     background: rgb(0,128,0);
     background: linear-gradient(40deg, rgba(51,51,51,0.99) 0%, rgba(51,51,51,0.99) 95%, rgba(0,128,0,0.57) 100%);
     color: #fff;
-    border-top: 0.5em solid #FFF;
+    border-top: 0.5rem solid #FFF;
 }
 
 .img-footer{
-    width: 15em;
-    margin: 1.1em 0 1em 0;
+    width: 15rem;
+    margin: 1.1rem 0 1rem 0;
 }
 
 .copyright{
-    font-size: 0.6em;
+    font-size: 0.6rem;
     text-align: center;
 }
 
@@ -220,7 +240,7 @@ nav li a:hover{
 }
 
 .menu-footer, .redes{
-    margin-top: 1.5em;
+    margin-top: 1.5rem;
 }
 
 .menu-footer li{
@@ -238,8 +258,8 @@ nav li a:hover{
 
 .redes i{
     color: #fff;
-    padding: 1em 1em 0 0;
-    font-size: 1.1em;
+    padding: 1rem 1rem 0 0;
+    font-size: 1.1rem;
 }
 
 .redes i:hover{
@@ -262,7 +282,7 @@ nav li a:hover{
 
 /*formulario*/
 form{
-    padding: 2em;
+    padding: 2rem;
 }
 
 form > div{
@@ -270,46 +290,46 @@ form > div{
     flex-direction: column; 
     align-items: center; 
     justify-content: center;
-    padding: 0.8em;
+    padding: 0.8rem;
 }
 
 
 form label{
-    font-size: 1.1em;
-    padding: 0.1em;
+    font-size: 1.1rem;
+    padding: 0.1rem;
     color: #fff;
     background-color: #333;
     border: 0.1em solid rgb(51, 51, 51);
-    border-radius: 0.2em;
+    border-radius: 0.2rem;
 }
 
 
 #nombre, #apellido, #email, #mensaje, .botones > input{
-    font-size: 1em;
-    padding: 0.5em;
-    margin-top: 0.5em;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
     width: 20em;
-    height: 1em;
+    /*height: 1rem;*/
     border: 0.1em solid rgb(51, 51, 51);
-    border-radius: 0.5em;
+    border-radius: 0.5rem;
 }
 
 #mensaje{
-    height: 10em;
+    height: 10rem;
 }
 
 .botones > input{
-    font-size: 1.1em;
-    height: 2.5em;
+    font-size: 1.1rem;
+    height: 2.5rem;
     color:#fff;
-    background-color: #333;
-    border: 0.14em solid rgb(0, 128, 0);
-    border-radius: 0.5em;
+    background-color: rgb(0, 128, 0);
+    border: 0.1rem solid #333;
+    border-radius: 0.5rem;
 }
 
 .botones > input:hover{
-    color: #333;
-    background-color:#fff;
+    color: #fff;
+    background-color:#333;
 
 }
 
@@ -325,51 +345,50 @@ form label{
 iframe{
     width: 500px;
     height: 500px;
-    border: 0.1em solid rgb(51, 51, 51);
-    border-radius: 0.5em;
+    border: 0.1rem solid rgb(51, 51, 51);
+    border-radius: 0.5rem;
 }
 
-
-
 /*producto*/
-.grid-container-producto{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    justify-content: space-between; 
-    align-items: center;
+.container-producto{
     background-image: linear-gradient(rgba(253, 249, 249, 0.5), rgba(51, 51, 51, 0.9)),
                   url("./img/tractor-6704118_1280.jpg");
 }
 
+.my-5{
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+}
+
 .producto{
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center;
-    margin: 2% 0 2% 0;
-    padding: 1%;
     background: rgb(0,128,0);
     background: linear-gradient(40deg, rgba(51,51,51,0.56) 0%, rgba(255,255,255,0.75) 6%, rgba(255,255,255,0.75) 95%, rgba(0,128,0,0.57) 100%);
-    border: 0.1em solid rgb(0, 128, 0);
-    border-radius: 0.5em;
+    border: 0.1rem solid rgb(0, 128, 0);
+    border-radius: 0.5rem;
 }
 
 .producto:hover{
     background: rgb(0,128,0);
     background: linear-gradient(40deg, rgba(51,51,51,0.56) 0%, rgba(255,255,255,0.75) 30%, rgba(255,255,255,0.75) 70%, rgba(0,128,0,0.57) 100%);
+    transition-duration: 50ms;
+    border: 0.1rem solid black;
 }
 
 .imagen-producto{  
-    width: 18em;
-    height: 7em;
+    width: auto;
+    height: 20rem;
     object-fit: cover;
-    border-radius: 0.5em;   
+    border-radius: 0.5rem;   
+}
+
+.imagen-producto:hover{
+    border: 0.12rem solid rgb(0,128,0);
+    border-radius: 0.5rem;
+    transition-duration: 50ms;
 }
 
 .nombre-producto, .precio-producto{
-    padding: 1em 0;
+    padding: 1rem 0;
 }
 
 .valoracion{
@@ -377,24 +396,19 @@ iframe{
 }
 
 .precio-producto{
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
-.boton-agregar{
-    padding: 0.5em;
-    font-size: 1em;
-    height: 2.5em;
-    color:#fff;
-    background-color: hwb(120 0% 50%);
-    border: 0.1em solid #333;
-    border-radius: 0.5em;
+.btn-primary{
+background-color: hwb(120 0% 50%);
+    border: 0.1rem solid #333;
+    border-radius: 0.5rem;
 }
 
-.boton-agregar:hover{
+.btn-primary:hover{
     background-color: rgb(51, 51, 51);
+    border: 0.12rem solid hwb(120 0% 50%);
 }
-
-
 
 @media (max-width:1500px)  {
     .grid-container-producto{
@@ -402,18 +416,41 @@ iframe{
     }
 }
 
+@media (max-width:1000px){
+    .icon_cart{
+        margin-top: 5.8rem;
+        right: 5rem;
+        box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
+    }
+
+    header {
+        flex-direction: column; 
+        height: auto;
+    }
+
+    nav li a{
+        font-size: 0.8rem;
+    }
+    
+    nav li {
+    margin-top: 0.5rem;
+    
+    }
+
+}
+
 
 @media (max-width:900px)  {
+
     .grid-container-resenas{
         grid-template-columns: repeat(2, 1fr);
-    }
+}
 
     .grid-container-producto{
         grid-template-columns: repeat(1, 1fr);
 }
 
     .formulario-mapa{
-       
         display: grid;
         grid-template-columns: repeat(1, 1fr);
 }
@@ -426,25 +463,14 @@ iframe{
         grid-template-columns: repeat(1, 1fr);
     }
 
-    header {
-        flex-direction: column; 
-        height: auto;
-    }
-
     .links-section-inicio, .container-footer{
         flex-direction: column; 
         text-align: center;
     }
 
-    nav{
-        margin: 2em 0 1em 0;
-    }
-
-    #icon_cart{
-        position: fixed;
-        right: 2em;
-        box-shadow: 0.3em 0.3em 0.3em 0.3em rgba(0, 0, 0, 0.3);;
-    }
+    /*nav{
+        margin: 2rem 0 1rem 0;
+    }*/
 
     #nombre, #apellido, #email, #mensaje, .botones > input{
         width: 60%;
@@ -454,28 +480,24 @@ iframe{
         display: none;
     }
 
-    nav li a{
-        font-size: 1em;
-        
-    }
-
     .titulo-inicio p{
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     .titulo-inicio{
-        padding: 1em 2em;
+        padding: 1rem 2rem;
     } 
 
     header img{
-        width: 15em;
+        width: 15rem;
     }
 
     .img-footer{
-        width: 9em;
+        width: 9rem;
     }
 
 }
+
 
 
 
