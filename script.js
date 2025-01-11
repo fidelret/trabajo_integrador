@@ -95,7 +95,8 @@ function eliminarDelCarrito(index) {
 }
 
 //Botón de compra
-document.querySelector(".compraOk").addEventListener('click', () => 
+let btnCompra = document.querySelector(".compraOk");
+btnCompra.addEventListener('click', () => 
   {
       Swal.fire({
           title: '¡Gracias!',
@@ -103,11 +104,12 @@ document.querySelector(".compraOk").addEventListener('click', () =>
           icon: 'success',
           confirmButtonText: 'Aceptar'
       });
+
   });
 
 // Cargar productos y carrito al inicio
 document.addEventListener('DOMContentLoaded', () => {
   cargarProductos();
   cargarCarritoDesdeStorage();
-  actualizarContadorCarrito(); // Asegura que el contador se actualice al cargar la página
+  actualizarContadorCarrito(); // Contador se actualiza al cargar la página
 });
