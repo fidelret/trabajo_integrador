@@ -3,7 +3,7 @@ const contadorCarrito = document.getElementById('contadorCarrito');
 const sonidoProductoAlcarrito = new Audio("/sounds/agregarAlCarrito.MP3");
 const compraExitosa = new Audio("/sounds/compraExitosa.MP3");
 const alerta = new Audio("/sounds/alerta.MP3");
-const carritoBorrado = new Audio ("/sounds/famikick-92712.mp3");
+const carritoBorrado = new Audio ("/sounds/stop.mp3");
 
 let carrito = [];
 let total = 0;
@@ -106,6 +106,7 @@ function eliminarDelCarrito(index) {
   guardarCarritoEnStorage();
   actualizarCarrito();
   actualizarContadorCarrito(); // Actualiza el contador después de eliminar
+  carritoBorrado.play();
 }
 
 //Botón borrar carrito
