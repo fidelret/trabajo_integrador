@@ -1,5 +1,9 @@
 const apiUrl = "https://fakestoreapi.com/products"; // API de prueba (Fake Store API)
 const contadorCarrito = document.getElementById('contadorCarrito');
+const sonidoProductoAlcarrito = new Audio("/sounds/agregarAlCarrito.MP3");
+const compraExitosa = new Audio("/sounds/compraExitosa.MP3");
+const alerta = new Audio("/sounds/alerta.MP3");
+const carritoBorrado = new Audio ("/sounds/famikick-92712.mp3");
 
 let carrito = [];
 let total = 0;
@@ -65,6 +69,7 @@ function agregarAlCarrito(id, nombre, precio) {
     icon: "success",
     draggable: true
   });
+  sonidoProductoAlcarrito.play();
 }
 
 // Función para actualizar la vista del carrito
@@ -85,6 +90,15 @@ function actualizarCarrito() {
   totalCarrito.textContent = total.toFixed(2);
 }
 
+// Función para borrar el carrito
+function borrarCarrito() {
+      carrito = [];
+      total = 0;
+      guardarCarritoEnStorage();
+      actualizarCarrito();
+      actualizarContadorCarrito(); // Actualiza el contador después de eliminar
+}
+
 // Función para eliminar productos del carrito
 function eliminarDelCarrito(index) {
   total -= carrito[index].precio;
@@ -94,17 +108,36 @@ function eliminarDelCarrito(index) {
   actualizarContadorCarrito(); // Actualiza el contador después de eliminar
 }
 
+//Botón borrar carrito
+let btnBorrar = document.querySelector(".borrar");
+btnBorrar.addEventListener('click' , () =>{
+        borrarCarrito();
+        carritoBorrado.play();
+});
+
 //Botón de compra
 let btnCompra = document.querySelector(".compraOk");
 btnCompra.addEventListener('click', () => 
   {
-      Swal.fire({
-          title: '¡Gracias!',
-          text: 'Su compra fue procesada con éxito',
-          icon: 'success',
-          confirmButtonText: 'Aceptar'
-      });
 
+    if (total == 0) {
+          Swal.fire({
+            title: '¡Atención!',
+            text: '¡Ud. no tiene productos en el carrito de compras!',
+            icon: 'error',
+            confirmButtonText: 'Aceptar'
+          });
+          alerta.play();
+    }else{
+          Swal.fire({
+              title: '¡Gracias!',
+              text: 'Su compra fue procesada con éxito',
+              icon: 'success',
+              confirmButtonText: 'Aceptar'
+          });
+          compraExitosa.play();
+          borrarCarrito();
+    }
   });
 
 // Cargar productos y carrito al inicio
